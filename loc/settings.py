@@ -25,7 +25,7 @@ SECRET_KEY = 'q5!e5#=g_m1-31a=9=6a6cth+k^)*kzj@65_ly^3=f&ckp*qd6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://meangine.azurewebsites.net/']
 
 
 # Application definition
