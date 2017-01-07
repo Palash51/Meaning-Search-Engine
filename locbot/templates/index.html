@@ -67,6 +67,7 @@
 	</div>
 </div>
 </body>
+
 <script src=https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js></script>
 <script type="text/javascript">"{% static 'js/bootstrap.min.js'  %}"</script>
 <script type="text/javascript">
@@ -86,10 +87,6 @@
       load.style.display="none"; 
       	b.style.display="";
       	inner.style.display="";
-      	var json = 'resultData',
-    	obj = JSON.parse(json);
-
-		alert(obj.count);
       	document.getElementById("show_content").innerHTML=resultData;
       	//alert(resultData); 
       }

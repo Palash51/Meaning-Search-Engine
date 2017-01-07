@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.conf import settings
 from django.http import HttpResponse
+from .models import words
 import requests
 import json
 #credentials
@@ -17,7 +18,8 @@ def home(request):
 def use_api(request):
 	response = request.GET.get('key')
 	url = 'https://od-api.oxforddictionaries.com:443/api/v1/entries/' + language + '/' + response.lower()
-
+	b = words(words_searched=response)
+	b.save()
 	r = requests.get(url, headers = {'app_id': app_id, 'app_key': app_key})
 
 	print("code {}\n".format(r.status_code))
